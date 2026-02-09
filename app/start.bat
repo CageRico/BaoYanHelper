@@ -1,0 +1,9 @@
+@echo off
+echo 正在启动保研助手...
+echo.
+echo 步骤 1/2: 启动开发服务器...
+start /B cmd /c "npm run dev"
+timeout /t 10 /nobreak >nul
+echo.
+echo 步骤 2/2: 启动应用窗口...
+npm run electron:dev
